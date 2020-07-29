@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O1q-QH-Jez">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -127,11 +127,22 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nv2-9G-amf">
+                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="weq-3i-iQL"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dmh-mf-8DB"/>
+                                    <barButtonItem systemItem="save" id="GB0-Ed-wws"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="S1H-nf-xZc" firstAttribute="leading" secondItem="1Aq-BC-Xl0" secondAttribute="leading" constant="20" id="7pD-Ou-hoh"/>
+                            <constraint firstItem="Nv2-9G-amf" firstAttribute="trailing" secondItem="1Aq-BC-Xl0" secondAttribute="trailing" id="CM7-fN-tNN"/>
+                            <constraint firstItem="Nv2-9G-amf" firstAttribute="bottom" secondItem="1Aq-BC-Xl0" secondAttribute="bottom" id="NT4-tn-tyu"/>
                             <constraint firstItem="S1H-nf-xZc" firstAttribute="top" secondItem="1Aq-BC-Xl0" secondAttribute="top" constant="20" id="OOw-bw-Uci"/>
+                            <constraint firstItem="Nv2-9G-amf" firstAttribute="leading" secondItem="1Aq-BC-Xl0" secondAttribute="leading" id="VKZ-TU-Raf"/>
                             <constraint firstItem="1Aq-BC-Xl0" firstAttribute="trailing" secondItem="S1H-nf-xZc" secondAttribute="trailing" constant="20" id="rOv-Rm-Pta"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Aq-BC-Xl0"/>
