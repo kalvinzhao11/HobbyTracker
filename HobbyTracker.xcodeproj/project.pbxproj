@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		896C141024D1E4C20074C871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896C140F24D1E4C20074C871 /* AppDelegate.swift */; };
 		896C141224D1E4C20074C871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896C141124D1E4C20074C871 /* SceneDelegate.swift */; };
-		896C141424D1E4C20074C871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896C141324D1E4C20074C871 /* ViewController.swift */; };
 		896C141724D1E4C20074C871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896C141524D1E4C20074C871 /* Main.storyboard */; };
 		896C141924D1E4C30074C871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 896C141824D1E4C30074C871 /* Assets.xcassets */; };
 		896C141C24D1E4C30074C871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896C141A24D1E4C30074C871 /* LaunchScreen.storyboard */; };
+		89AD92C224D39D68002ECEF6 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AD92C124D39D68002ECEF6 /* FriendsTableViewController.swift */; };
+		89AD92C424D39D8A002ECEF6 /* NewFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AD92C324D39D8A002ECEF6 /* NewFriendViewController.swift */; };
+		89AD92C724D39E06002ECEF6 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AD92C624D39E06002ECEF6 /* FriendTableViewCell.swift */; };
+		89AD92CE24D48FFA002ECEF6 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AD92CD24D48FFA002ECEF6 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		896C140C24D1E4C20074C871 /* HobbyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HobbyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		896C140F24D1E4C20074C871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		896C141124D1E4C20074C871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		896C141324D1E4C20074C871 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		896C141624D1E4C20074C871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		896C141824D1E4C30074C871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		896C141B24D1E4C30074C871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		896C141D24D1E4C30074C871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89AD92C124D39D68002ECEF6 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		89AD92C324D39D8A002ECEF6 /* NewFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFriendViewController.swift; sourceTree = "<group>"; };
+		89AD92C624D39E06002ECEF6 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		89AD92CD24D48FFA002ECEF6 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,8 @@
 		896C140324D1E4C20074C871 = {
 			isa = PBXGroup;
 			children = (
+				89AD92CD24D48FFA002ECEF6 /* Friend.swift */,
+				89AD92C824D39E25002ECEF6 /* Views */,
 				896C140E24D1E4C20074C871 /* HobbyTracker */,
 				896C140D24D1E4C20074C871 /* Products */,
 			);
@@ -56,15 +64,48 @@
 		896C140E24D1E4C20074C871 /* HobbyTracker */ = {
 			isa = PBXGroup;
 			children = (
-				896C140F24D1E4C20074C871 /* AppDelegate.swift */,
-				896C141124D1E4C20074C871 /* SceneDelegate.swift */,
-				896C141324D1E4C20074C871 /* ViewController.swift */,
-				896C141524D1E4C20074C871 /* Main.storyboard */,
-				896C141824D1E4C30074C871 /* Assets.xcassets */,
-				896C141A24D1E4C30074C871 /* LaunchScreen.storyboard */,
+				89AD92C524D39DAD002ECEF6 /* View Controllers */,
+				89AD92C024D39C70002ECEF6 /* StoryBoards */,
+				89AD92BF24D39C50002ECEF6 /* Resources */,
 				896C141D24D1E4C30074C871 /* Info.plist */,
 			);
 			path = HobbyTracker;
+			sourceTree = "<group>";
+		};
+		89AD92BF24D39C50002ECEF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				896C140F24D1E4C20074C871 /* AppDelegate.swift */,
+				896C141124D1E4C20074C871 /* SceneDelegate.swift */,
+				896C141824D1E4C30074C871 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		89AD92C024D39C70002ECEF6 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				896C141524D1E4C20074C871 /* Main.storyboard */,
+				896C141A24D1E4C30074C871 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		89AD92C524D39DAD002ECEF6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				89AD92C124D39D68002ECEF6 /* FriendsTableViewController.swift */,
+				89AD92C324D39D8A002ECEF6 /* NewFriendViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		89AD92C824D39E25002ECEF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				89AD92C624D39E06002ECEF6 /* FriendTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				896C141424D1E4C20074C871 /* ViewController.swift in Sources */,
 				896C141024D1E4C20074C871 /* AppDelegate.swift in Sources */,
+				89AD92C424D39D8A002ECEF6 /* NewFriendViewController.swift in Sources */,
+				89AD92C724D39E06002ECEF6 /* FriendTableViewCell.swift in Sources */,
+				89AD92CE24D48FFA002ECEF6 /* Friend.swift in Sources */,
 				896C141224D1E4C20074C871 /* SceneDelegate.swift in Sources */,
+				89AD92C224D39D68002ECEF6 /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
