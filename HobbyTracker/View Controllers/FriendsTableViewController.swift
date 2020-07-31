@@ -28,22 +28,21 @@ class FriendsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return friends.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendTableViewCell else { fatalError("Cell identifier is wrong of the cell is not of type FriendTableCell") }// as? is downcasting
 
         // Configure the cell...
-
+        let friend = friends[indexPath.row]
+        cell.nameLabel.text = friend.name
+        cell.homeTownLabel.text = friend.hometown
+        cell.hobbiesLabel.text = "\(friend.hobbies.count) hobbies"
+        
         return cell
     }
 
@@ -52,8 +51,22 @@ class FriendsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ModalNewFriend" {
+            let newFriendVC = segue.destination as? NewFriendViewController
+            // Tell the delegator (NewFriendViewController) that the table view controller will be its delegate.
+            newFriendVC?.delegate = self // when you have a new friend this is who you will tell, the tableviewcontroller
+        }
     }
+}
 
+extension FriendsTableViewController: NewFriendDelegate {
+    
+    // this is the detail VC telling us that a friend was created. We can do anything we want with this friend. We should probably add it to our array of friends and reload the table view to show it to the user.
+    func friendWasCreated(friend: Friend) {
+        friends.append(friend)
+        tableView.reloadData()
+    }
+    
+    
 }
